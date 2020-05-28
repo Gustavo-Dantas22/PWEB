@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+   
+    <!-- Exercício 1 -->
+    <input id="largura" value="" />
+    <input id="altura" value="" />
+    <button onclick="calcularArea()">Calcular</button>
+
+    <!-- Exercício 2 -->
+    <p><input id="largura" value="" />
+    <input id="altura" value="" />
+    <button onclick="calcularArea()">Calcular</button>
+    </p>
+  </body>
+</html>
+<script>
+  //Exercicio 1
+  function calcularArea() {
+    var x = Number(document.getElementById("largura").value);
+    var y = Number(document.getElementById("altura").value);
+
+    var retangulo = new Retangulo(x, y);
+    alert(retangulo.calcularArea());
+  }
+
+  function Retangulo(x, y) {
+    this.largura = x;
+    this.altura = y;
+    this.calcularArea = function () {
+      return this.largura * this.altura;
+    };
+  }
+
+  //Exercicio 2
+  function Conta() {
+    var nomeCorrentista;
+    var numeroConta;
+    var banco;
+    var saldo;
+
+    this.setNomeCorrentista = function (nome) {
+      this.nomeCorrentista = nome;
+    };
+
+    this.setnumeroConta = function (numConta) {
+      this.numeroConta = numConta;
+    };
+      
+    this.setBanco = function (banco) {
+      this.banco = banco;
+    };
+
+    this.setSaldo = function (saldo) {
+      this.saldo = saldo;
+    };
+
+    this.getNomeCorrentista = function () {
+      return this.nomeCorrentista;
+    };
+
+    this.getnumeroConta = function () {
+      return this.numeroConta;
+    };
+
+    this.getBanco = function () {
+      return this.banco;
+    };
+
+    this.getSaldo = function () {
+      return this.saldo;
+    };
+  }
+
+  function Corrente() {
+    Conta.call(this);
+    var saldoEspecial;
+
+    this.setSaldoEspecial = function (saldoEspecial) {
+      this.saldoEspecial = saldoEspecial;
+    };
+
+    this.getSaldoEspecial = function () {
+      return this.saldoEspecial;
+    };
+  }
+
+  function Poupanca() {
+    Conta.call(this);
+    var juros;
+    var dataVencimento;
+
+    this.setJuros = function (juros) {
+      this.juros = juros;
+    };
+
+    this.setDataVencimento = function (dataVencimento) {
+      this.dataVencimento = dataVencimento;
+    };
+
+    this.getDataVencimento = function () {
+      return this.dataVencimento;
+    };
+
+    this.getJuros = function () {
+      return this.juros;
+    };
+  }
+    
+  var conta = new Conta();
+  conta.setBanco("Itau");
+  conta.setNomeCorrentista("Kleber Trevoso");
+  conta.setnumeroConta("24356941353216745-1");
+  conta.setSaldo("3.075,00");
+
+  console.group("Objeto Conta", conta);
+
+  var poupanca = new Poupanca();
+  poupanca.setBanco("Itau");
+  poupanca.setNomeCorrentista("Kleber Trevoso");
+  poupanca.setnumeroConta("24356941353216745-1");
+  poupanca.setSaldo("3.075,00");
+  poupanca.setJuros = "12%";
+  poupanca.setDataVencimento = "02/05/2028";
+
+  console.group("Objeto Poupança", poupanca);
+
+  var corrente = new Corrente();
+  corrente.setBanco("Itau");
+  corrente.setNomeCorrentista("Kleber Trevoso");
+  corrente.setnumeroConta("24356941353216745-1");
+  corrente.setSaldo("3.075,00");
+  corrente.setSaldoEspecial = "8.520";
+
+  console.group("Objeto Corrente", corrente);
+</script>
