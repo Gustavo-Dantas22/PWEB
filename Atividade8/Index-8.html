@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+        body{
+            align-content: center;
+        }
+        div img{
+            width: 400px;
+            height:400px;
+            margin-left:20%;
+            margin-right: 20%;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> ABRA A JANELA </h1>
+    <h2> Mova para fora para abrir</h2>
+    <div
+    onmouseout="(document.getElementById('imagem').src= 'jopen.png')"
+    onmouseover="(document.getElementById('imagem').src= 'jclosed.png')"
+    onclick="(document.getElementById('imagem').src= 'jbroken.png')">
+    <img id="imagem" src="jclosed.png">
+    </div>  
+  
+</body>
+</html>
