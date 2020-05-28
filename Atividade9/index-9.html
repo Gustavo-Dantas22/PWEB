@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Uppercase Converter</h3>
+
+<input type="text" id="myText" value="Digite seu texto...">
+
+<p>Converte o texto para maiusculo</p>
+
+<button onclick="convertUpper()"> Converter </button>
+
+<p id="sample"></p>
+
+<script>
+function convertUpper() {
+    
+  var x = document.getElementById("myText").value;
+  var x = x.toUpperCase();
+  document.getElementById("sample").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
