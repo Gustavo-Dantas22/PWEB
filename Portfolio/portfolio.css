@@ -1,0 +1,99 @@
+h1 {font-size: 20px;}
+
+p{
+    color:#FFFFFF /*white*/;
+    font-size: 15px;
+    font-family: Arial;
+    text-shadow: 1px 1px 1px #111111;
+
+}
+
+label{
+    color:#FFFFFF /*white*/;
+    font-size: 15px;
+    font-family: Arial;
+    text-shadow: 1px 1px 1px #111111;
+    text-align: center;
+    
+}
+body{
+    background-color: black;
+}
+*{
+    margin: 0;
+    border: 0;
+    font-family: helvetica, arial;
+}
+
+header{
+    background-color: #35b8b0;
+    height: 100px;
+    padding: 20px;
+}
+
+#principal{
+    /*background-image: url('fundoProgramacao3.jpg');
+    /*background-color: grey;*/
+    clear: both;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    padding: 80px 
+}
+#logo{
+    float:left;
+}
+
+#menu{
+    margin-top: 45px;
+    float:right;
+}
+
+#menu a{
+    padding: 65px 20px 58px 20px;
+    text-decoration: none;
+    color: #111;
+    text-shadow: 1px 1px 1px #111111;  
+}
+
+#menu a:hover{
+    background-color: #008B8B;
+    color: #35b8b0;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    color: #fa3838;
+    text-shadow: 1px 1px #111111;
+    text-align: center;
+    margin: 0 0 50px 0;
+    
+}
+
+p1{
+    color:#fa3838;
+    font-family: cursive;
+    position: absolute;
+}
+
+
+footer{
+    clear: both;
+    background-color: #35b8b0;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.efeito{
+    background-color:  rgba(0,0,0,0.5);
+    padding: 80px 0 80px 0;
+}
